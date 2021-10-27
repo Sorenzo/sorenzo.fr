@@ -13,6 +13,12 @@ body {
   place-items: center;
 }
 
+
+h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
 .holder {
   position: relative;
 }
@@ -48,37 +54,37 @@ body {
 
 .card {
   border: 1px solid #fff;
-  border-radius: 15px;
+  padding: 2rem;
+  border-radius: 25px;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   font-size: 2rem;
-  height: 220px;
   overflow: hidden;
-  position: relative;
-  width: 370px;
-}
-
-.card:before {
-  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
-  content: '';
-  height: 100%;
-  position: absolute;
-  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: .3s all;
 }
 
-.card__text {
-  color: #6f7886;
-  margin-left: 30px;
-  margin-top: 100px;
-  position: relative;
-  z-index: 2;
+.card:hover {
+  cursor: pointer;
+  padding: 2.5rem;
 }
 
 .card svg {
-  bottom: 30px;
-  position: absolute;
-  right: 30px;
+  margin-bottom: 0.3rem;
+  height: 100px;
+  z-index: 1;
 }
+
+.card img {
+  margin-bottom: 0.3rem;
+  height: 100px;
+  z-index: 1;
+}
+
+
 
 @keyframes orbit {
   from {
