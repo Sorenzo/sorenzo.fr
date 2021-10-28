@@ -4,13 +4,24 @@
   box-sizing: border-box;
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  
-  background-size: cover;
-  display: grid;
-  font-family: 'Inconsolata', monospace;
   min-height: 100vh;
-  place-items: center;
+  position: relative;
+  overflow: hidden;
+
+  background-size: cover;
+
+  font-family: 'Inconsolata', monospace;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0
 }
 
 
@@ -18,6 +29,20 @@ h3 {
   font-size: 1.1rem;
   margin: 0;
 }
+
+
+.sidebar {
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
 
 .holder {
   position: relative;
@@ -65,11 +90,7 @@ h3 {
   backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
   background-color: rgba(255, 255, 255, 0.3);
   transition: .3s all;
-}
-
-.card:hover {
-  cursor: pointer;
-  padding: 2.5rem;
+  z-index: 1;
 }
 
 .card svg {
