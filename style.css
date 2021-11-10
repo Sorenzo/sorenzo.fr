@@ -7,22 +7,31 @@
 body, html {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 body {
   min-height: 100vh;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  height: 100vh;
+  display: flex;
+  margin-left: 15%;
+  align-items: center;
 
-  background-size: cover;
+  background-color: #0079d8;
 
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Segoe UI', monospace;
+  color: #FFF;
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 9rem;
+  font-weight: 400;
   margin: 0
 }
+
+
 
 
 h3 {
@@ -30,88 +39,15 @@ h3 {
   margin: 0;
 }
 
-
-.sidebar {
-  height: 100vh;
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-
-
-.holder {
-  position: relative;
-}
-
-.holder:before,
-.holder:after {
-  animation: orbit 5s linear infinite;
-  border-radius: 50%;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
-  content: '';
-  height: 150px;
-  position: absolute;
-  width: 150px;
-}
-
-.holder:before {
-  background: #ffe897;
-  background: -moz-radial-gradient(top right, #ffe897, #f98a05);
-  background: radial-gradient(to bottom left, #ffe897, #f98a05);
-  background: -webkit-radial-gradient(top right, #ffe897, #f98a05);
-}
-
-.holder:after {
-  animation-delay: 2.5s;
-  background: #e0e793;
-  background: -moz-radial-gradient(bottom right, #e0e793, #6dd0f1);
-  background: radial-gradient(to top left, #e0e793, #6dd0f1);
-  background: -webkit-radial-gradient(bottom right, #e0e793, #6dd0f1);
-  right: 0;
-  top: 0;
-  z-index: -1;
-}
-
-.card {
-  border: 1px solid #fff;
-  padding: 2rem;
-  border-radius: 25px;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+p {
   font-size: 2rem;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
-  background-color: rgba(255, 255, 255, 0.3);
-  transition: .3s all;
-  z-index: 1;
-}
-
-.card svg {
-  margin-bottom: 0.3rem;
-  height: 100px;
-  z-index: 1;
-}
-
-.card img {
-  margin-bottom: 0.3rem;
-  height: 100px;
-  z-index: 1;
 }
 
 
-
-@keyframes orbit {
-  from {
-    transform: rotate(0deg) translateX(100px) rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg) translateX(100px) rotate(-360deg);
-  }
+.qr {
+  background-color: #FFF;
+  width: 130px;
+  height: 130px;
+  display: grid;
+  place-items: center;
 }
